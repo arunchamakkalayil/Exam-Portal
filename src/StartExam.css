@@ -1,0 +1,24 @@
+.start-exam-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+/* Center text and logo */
+  }
+  
+  .logo {
+    height: 50%;
+    width: 50%; /* Ensure the logo doesn't exceed its container */
+    margin-bottom: 20px;
+    display: block; /* Make it a block-level element to center with margin: auto */
+    margin: 0 auto 20px; /* Center the logo horizontally and add some spacing at the bottom */ /* Add some spacing between the logo and other elements */
+  }
+  
+  /* Add media queries for responsiveness */
+  @media (max-width: 600px) {
+    .start-exam-container {
+      max-width: 100%; /* Allow the container to take full width on smaller screens */
+    }
+  }
+  
+  /* Add more media queries as needed */
+  
