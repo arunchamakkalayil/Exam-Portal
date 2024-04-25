@@ -2,7 +2,7 @@
 import React from 'react';
 import './ExamEnd.css'; // Import the CSS file
 
-const ExamEnd = () => {
+const ExamEnd = ({score}) => {
   return (
     <div className="exam-end-container">
       <img
@@ -12,7 +12,10 @@ const ExamEnd = () => {
       />
     
       <p>Response Submitted Successfully</p>
-      {/* You can add additional content or actions here */}
+      {typeof score === 'number' && (
+        <p>Score: {score}</p>
+      )}
+  
     </div>
   );
 };

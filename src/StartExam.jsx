@@ -31,7 +31,19 @@ const StartExam = ({ onStart }) => {
 
   return (
     <div className="start-exam-container">
-      <img src={logo} alt="Logo" className="logo" />
+      
+     <div className="row">
+     <div className=" section exam col-md-6 p-4">
+      {/* <img src={logo} alt="Logo" className="logo" /> */}
+      <lord-icon
+    src="https://cdn.lordicon.com/wzrwaorf.json"
+    trigger="loop"
+    delay="2000"
+    state="hover-conversation-alt"
+    style={{width:"400px",height:"400px"}}>
+</lord-icon>
+      </div>
+      <div className="section exam col-md-6 p-5">
       <div>
         <h2>Exam Instructions</h2>
         <ul>
@@ -43,9 +55,16 @@ const StartExam = ({ onStart }) => {
         </ul>
       </div>
       <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <label htmlFor="phone">Phone Number:</label>
+        <div className="row">
+          <div className="col-md-12 pb-3">
+          <label htmlFor="name"><b>Name: </b></label>
+         <br />
+        <input type="text" id="name"  value={name} onChange={(e) => setName(e.target.value)} required />
+       
+          </div>
+          <div className="col-md-12 ">
+          <label htmlFor="phone"><b>ID :</b></label>
+<br />
         <input
           type="tel"
           id="phone"
@@ -53,11 +72,21 @@ const StartExam = ({ onStart }) => {
           onChange={(e) => setPhone(e.target.value)}
           pattern="[0-9]{10}"
           required
+         
         />
-        <button type="button" onClick={handleStart}>
+          </div>
+        </div>
+       {<br></br>}
+        <button type="button" className='btn btn-info text-white' onClick={handleStart}>
           Start Exam
         </button>
       </div>
+
+      </div>
+     </div>
+
+   
+      
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick pauseOnFocusLoss draggable pauseOnHover />
     </div>
   );
